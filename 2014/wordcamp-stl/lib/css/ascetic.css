@@ -1,0 +1,49 @@
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+
+*/
+
+pre code {
+  display: block;
+  background: white; color: black;
+  border: solid #CCC 1px;
+}
+
+.string,
+.attribute .value,
+.filter .argument,
+.addition,
+.change {
+  color: #888;
+}
+
+.comment, 
+.template_comment,
+.shebang,
+.doctype,
+.pi,
+.javadoc,
+.deletion {
+  color: #CCC;
+}
+
+.keyword,
+.tag .title,
+.ini .title,
+.winutils,
+.flow {
+  font-weight: bold;
+}
+
+.rownumber { 
+  border-right: 2px solid #AAA;
+  margin-right: 4px; 
+  background-color: #EEE;
+}
+
+.alternaterow { 
+  width: 100%; 
+  display: block; 
+  background-color: #F9F9F9;
+}

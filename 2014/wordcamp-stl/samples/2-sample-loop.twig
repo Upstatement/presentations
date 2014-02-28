@@ -1,0 +1,5 @@
+{% for post in posts %}
+	<h2>
+		<a href="{{post.permalink}}" rel="bookmark" title="Permanent Link to {{post.title}}">{{post.title}}</a>
+	</h2>
+{% endfor %}

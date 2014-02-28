@@ -1,0 +1,7 @@
+
+	<h1>{{post.title}}</h1>
+	{% if post.comment_count %}
+		<p>There are {{post.comment_count}} comments</p>
+	{% else %}
+		<p>No comments yet!</p>
+	{% endif %}

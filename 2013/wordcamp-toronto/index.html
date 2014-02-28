@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>WordPress Templates are broken! - WordCamp Toronto 2013 - Jared Novack</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Jared Novack">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/simple.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/solarized_light.css">
+
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Coustard:900' rel='stylesheet' type='text/css'>
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<script type="text/javascript">
+
+			  var _gaq = _gaq || [];
+			  _gaq.push(['_setAccount', 'UA-15753546-5']);
+			  _gaq.push(['_setAllowLinker', true]);
+			  _gaq.push(['_trackPageview']);
+
+			  (function() {
+			    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			  })();
+
+			</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<header class="timber-header"></header>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>WordPress Templates Are Broken!</h1>
+					<h3 class="fragment">(But We Can Fix Them)</h3>
+					<aside class="notes">
+						But it's not all doom and gloom. I promise this is gonna be a fun presenation.
+					</aside>
+				</section>
+
+				<section>
+					<div class="">
+						<h1>Jared Novack</h1>
+						<h3><a href="http://twitter.com/jarednova" target="_blank">@jaredNova</a></h3>
+					</div>
+				</section>
+
+				<section>
+
+					<section>
+						<img src="images/wc/daily-orange.png" class="naked" />
+						<aside class="notes">
+				        	I got my start not too far from here...
+				    	</aside>
+					</section>
+
+					<section>
+						<img src="images/newspapers.png" class="naked"/>
+						<aside class="notes">
+							But believe it or not, newspapers are not best place to do cutting-edge design + tech; at least in 2009
+						</aside>
+					</section>
+
+					<section>
+						<h2><img src="images/upstatement-logo.png" class="naked"></h2>
+					</section>
+
+					<section>
+						<img src="images/bglobe-ipad.png" class="naked" />
+					</section>
+
+					<section>
+						<img src="images/toronto/globalnews.png" class="naked" />
+					</section>
+
+					<section>
+						<img src="images/about-upstatement.jpg" />
+						<aside class="notes">
+							I'm gonna throw down some WordPress hate
+				    	</aside>
+					</section>
+
+				</section>
+
+			<!-- 	<section>
+					<img src="images/wc/rgi.png" />
+				</section> -->
+
+
+				<section>
+					<h2>I <strong>love</strong> WordPress</h2>
+					<aside class="notes">
+						I didn't always though, I started out using a difft CMS....
+				    </aside>
+				</section>
+
+				<section>
+					<img src="images/wc/drupal.png" class="naked"  />
+					<aside class="notes">
+				     	For 6 months I was a hardcore Druapl dev
+				    </aside>
+				</section>
+
+				<section>
+					<img src="images/wc/dig-logo.png" class="naked" />
+					<aside class="notes">
+				     	NOW in Toronto
+				    </aside>
+				</section>
+
+				<section>
+					<img src="images/wc/dig.png" class="naked" />
+					<aside class="notes">
+				        I went to Asia came back, and my partner had already built half of it in WordPress.
+				        When I saw that I was getting ready for this big talk with him; and then I really looked at the code.
+				    </aside>
+				</section>
+
+				<section>
+					<h4 class="overline">Things to love about WordPress</h4>
+					<img src="images/wordpress-admin.png" class="naked" />
+					<p>Oh, love that Admin</p>
+				</section>
+
+				<section>
+					<h4 class="overline">Things to love about WordPress</h4>
+					<h3>Easy to get started</h3>
+					<h4 class="fragment">WordPress.com</h4>
+					<h4 class="fragment">WordPress.org</h4>
+					<h4 class="fragment">Go plugin shopping</h4>
+					<h4 class="fragment">Write your own theme!</h4>
+					<h4 class="fragment">Write your own plugins!</h4>
+					<h4 class="fragment">Share!</h4>
+					<aside class="notes">
+						<h4 class="">WordPress.com</h4>
+						<h4 class="">WordPress.org</h4>
+						<h4 class="">Go plugin shopping</h4>
+						<h4 class="">Write your own theme!</h4>
+						<h4 class="">Write your own plugins!</h4>
+						<h4 class="">Share!</h4>
+				    </aside>
+				</section>
+
+				<section>
+					<h4 class="overline">Things to love about WordPress</h4>
+					<h3>The <em>best</em> community</h3>
+					<aside class="notes">
+				        I'm not a JoomlaCamp Toronto, right? This month there's been a WordCamp baltimore and WC Louisville. These are places that tech conferences normally don't go. I sometimes don't realize this in the Boston bubble (or NY or SF) but it's awesome that WordPress holds events in these exotic locations like Gran Birmingham -- I saw one of hte speakers here organizes the Canton Ohio WordCamp.
+				    </aside>
+				</section>
+
+				<section>
+					<section>
+						<h4 class="overline">Things to love about WordPress</h4>
+						<img src="images/starkers-files.jpg" />
+						<p>Clear and sensible template hierarchy</p>
+					</section>
+					<section>
+						<ul>
+							<li>index.php</li>
+							<li class="fragment">home.php</li>
+							<li class="fragment">page.php</li>
+							<li class="fragment">page-about.php</li>
+							<li class="fragment">single.php</li>
+							<li class="fragment">single-portfolio.php</li>
+							<li class="fragment">archive-portfolio.php</li>
+						</ul>
+						<aside class="notes">
+							<ul>
+								<li>index.php</li>
+								<li class="">home.php</li>
+								<li class="">page.php</li>
+								<li class="">page-about.php</li>
+								<li class="">single.php</li>
+								<li class="">single-portfolio.php</li>
+								<li class="">archive-portfolio.php</li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<h2>Let's start Theming!</h2>
+				</section>
+
+				<section>
+					<img src="images/twentyten.png" class="naked"/>
+					<h3 class="tag">TwentyTen Theme</h3>
+				</section>
+
+				<section>
+					<img src="images/twentytwelve.png" class="naked"/>
+					<h3 class="tag">TwentyTwelve Theme</h3>
+					<aside class="notes">
+						And when you see this stew of function calls and conditionals of PHP open/close tags of HTML. We have a word for this...
+					</aside>
+				</section>
+
+				<section>
+					<h4>We have a word for this...</h4>
+					<img class="fragment" src="images/spaghetti.jpg" />
+					<aside class="notes">
+						And this is what I think other developers when they think of WordPress. this is that top level of code that most interact with. So I live in Boston, specifically Cambrdige -- and when I'm out and introudce myself... (Developer per captia joke)
+					</aside>
+				</section>
+
+				<section>
+					<h2>I'm a WordPress Developer</h2>
+					<aside class="notes">
+						Oh, that's cool <strong>I guess</strong>. Because they are
+					</aside>
+				</section>
+
+				<section>
+					<h3>Ruby on Rails</h3>
+					<h3 class="fragment">Django</h3>
+					<h3 class="fragment">Laravel/Symfony/Zend</h3>
+					<h3 class="fragment">Node.js</h3>
+					<h3 class="fragment">Yes, even Drupal</h3>
+					<aside class="notes">
+						Stop after node. "All of these platforms has a REALLY important feature that WordPress lacks. And that feature? Yes even drupal has it.
+						<div>
+							So what is this very important thing that WordPress is missing?
+						</div>
+					</aside>
+				</section>
+
+				<section>
+					<h2 class="fragment bright">A Template Language</h3>
+					<aside class="notes">
+						So what is this really important thing that WordPress is missing?
+					</aside>
+				</section>
+
+				<section>
+					<img src="images/hogan.png" class="naked side-2"/>
+					<img src="images/handlebars.png" class="naked side-2"/>
+				</section>
+
+				<section>
+					<img src="images/toronto/jquery.png" />
+				</section>
+
+				<section>
+					<pre><code contenteditable style="font-size: 28px; line-height:32px; margin-top: 20px;">&lt;div class=&quot;entry&quot;&gt;<br/>	&lt;h1&gt;Hello World!&lt;/h1&gt;	<br/>	&lt;div class=&quot;body&quot;&gt;<br/>This is my sample post, right here.<br/>	&lt;/div&gt;<br/>&lt;/div&gt;
+					</code></pre>
+					<aside class="notes">
+						Everyone understands this right, just HTML. This is the "advanced" room.
+					</aside>
+				</section>
+
+				<section>
+					<pre><code contenteditable style="font-size: 28px; line-height:32px; margin-top: 20px;">&lt;div class=&quot;entry&quot;&gt;<br/>	&lt;h1&gt;{{title}}&lt;/h1&gt;	<br/>	&lt;div class=&quot;body&quot;&gt;<br/>	{{body}}<br/>	&lt;/div&gt;<br/>&lt;/div&gt;
+					</code></pre>
+					<aside class="notes">
+						Everyone understands this right, still good?
+					</aside>
+				</section>
+
+				<section>
+					Wait a second...
+				</section>
+
+				<section>
+					<img src="images/singlephp.png" />
+				</section>
+
+				<section>
+					<!-- <img src="images/singlehtml.png" /> -->
+					<pre><code contenteditable style="font-size: 28px; line-height:32px; margin-top: 20px;">&lt;div class=&quot;entry&quot;&gt;<br/>	&lt;h1&gt;{{post.title}}&lt;/h1&gt;	<br/>	&lt;div class=&quot;body&quot;&gt;<br/>	{{post.content}}<br/>	&lt;/div&gt;<br/>&lt;/div&gt;
+					</code></pre>
+				</section>
+
+				<section class="mvc-slide">
+					<h2>MVC</h2>
+
+					<h3 class="fragment">Model</h3>
+					<p class="fragment">Your data</p>
+
+					<h3 class="fragment">View</h3>
+					<p class="fragment">What it looks like</p>
+
+					<h3 class="fragment">Controller</h3>
+					<p class="fragment">Logic.</p>
+				</section>
+
+				<section class="mvc-slide">
+					<h2>MVC in WordPress</h2>
+					<h3 class="fragment">Model</h3>
+					<p class="fragment">WordPress Database</p>
+
+					<h3 class="fragment">View</h3>
+					<p class="fragment"><strong>The .php files</strong> inside the theme folder</p>
+
+					<h3 class="fragment">Controller</h3>
+					<p class="fragment"><strong>The .php files</strong> inside the theme folder</p>
+				</section>
+
+				<section>
+					<img src="images/twentytwelve.png"  class="naked" />
+					<h5>So we get this</h5>
+				</section>
+
+				<section>
+					<h2>Um, this is <strong>bad</strong> ...</h2>
+					<h3 class="fragment">For WordPress developers</h3>
+				</section>
+
+				<section>
+					<section>
+						<h3><strong>Bad</strong> for beginners</h3>
+					</section>
+					<section>
+						<img src="images/twentyelevendir.png" class="naked"/>
+					</section>
+					<section>
+						<img src="images/error.png" class="naked" />
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2><strong>Bad</strong> for experts</h2>
+					</section>
+					<section>
+						<h3>... because my code is a mess</h3>
+						<img src="images/dailyorange.png" class=""/>
+					</section>
+
+					<section>
+						<h3><strong>Bad</strong> for collaboration</h3>
+					</section>
+
+					<section>
+						<img src="images/toronto/npr.png" />
+					</section>
+				</section>
+
+				<section>
+					<h3><strong>Bad</strong> for WordPress</h3>
+				</section>
+
+				<section>
+					<img src="images/toronto/craft.png" />
+				</section>
+
+				<section>
+					<h2>So let's fix it.</h2>
+				</section>
+
+				<section>
+					<section>
+						<img src="images/twig.png" class="naked" />
+					</section>
+
+					<section>
+						<img src="images/twig-docs.png" class="naked" />
+					</section>
+
+					<section>
+						<h2>Symfony</h2>
+					</section>
+
+					<section>
+						<img src="images/django.png" class="naked"  />
+					</section>
+
+
+				</section>
+
+				<section>
+					<h1 class="fragment"><img src="images/timber-logo.png" class="naked" /></h1>
+					<h3>Twig + WordPress</h3>
+					<aside class="notes">
+						The result is a plugin called... it lets you use Twig templates in your theme
+					</aside>
+				</section>
+
+				<section>
+					<h3>In normal WordPress</h3>
+
+					<div class="icon-group" style="margin:auto;" >
+						<img src="images/icon-php.png" class="naked" />
+						<h5>single.php</h5>
+					</div>
+				</section>
+
+
+				<section>
+					<h3>With WordPress Timber</h3>
+					<div style="width:66%; margin:auto;">
+						<div class="icon-group side-2">
+							<img src="images/icon-php.png" class="naked" />
+							<h5>single.php</h5>
+						</div>
+
+						<div class="icon-group fragment side-2" >
+							<img src="images/icon-html.png" class="naked" />
+							<h5>single.twig</h5>
+						</div>
+					</div>
+					<aside class="notes">
+						2 files? isn't this twice as complicated?
+					</aside>
+				</section>
+
+				<section>
+					<h3>Seperation of Concerns</h3>
+					<aside class="notes">
+						So what is PHP good for?
+					</aside>
+				</section>
+
+				<section>
+					<img src="images/wc/box.png" class="naked"/>
+					<ol>
+						<li>Make a box</li>
+						<li class="fragment">Fill it with data</li>
+						<li class="fragment">Send it to the template</li>
+					</ol>
+				</section>
+
+				<section>
+					<img src="images/wc/ts-single-php.png" class="naked" />
+				</section>
+
+				<section>
+					<img src="images/wc/ts-single-twig.png" class="naked" />
+				</section>
+
+				<section>
+					<img src="images/wc/bt-home-php.png" class="naked" />
+				</section>
+
+				<section>
+					<img src="images/wc/bt-home-twig.png" class="naked" />
+				</section>
+
+				<section>
+					<h1>What can Twig do for you?</h1>
+					<ul class="fragment">
+						<li>Variables</li>
+						<li>Simple Logic</li>
+						<li>Filters</li>
+					</ul>
+				</section>
+
+				<section>
+					<h4 class="overline">Twig Features</h4>
+					<h3>Variables</h3>
+					<ul>
+						<li>Title</li>
+						<li>Permalink</li>
+						<li>ISBN (custom field)</li>
+					</ul>
+				</section>
+
+				<section>
+					<ul class="naked">
+						<li>&lt;h1>&lt;?php echo <strong>get_the_title();</strong> ?&gt;&lt;/h1&gt;</li>
+						<li class="fragment">&lt;a href="&lt;?php echo <strong>get_permalink();</strong> ?&gt;"&gt;My title&lt;/a&gt;</li>
+						<li class="fragment">The ISBN is: &lt;?php echo <strong>get_post_meta(get_the_ID(), 'ISBN', true);</strong> ?&gt;</li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="images/wc/codex.png" class="naked" />
+				</section>
+
+				<section>
+					<ul class="naked">
+						<li>&lt;h1&gt;<strong>{{post.title}}</strong>&lt;/h1&gt;</li>
+						<li class="fragment">&lt;a href="<strong>{{post.permalink}}</strong>"&gt; My Title &lt;/a&gt;</li>
+						<li class="fragment">The ISBN is: <strong>{{post.ISBN}}</strong></li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>print_r($post);</h2>
+					</section>
+					<section>
+						<h2>{{post | print_r}}</h2>
+					</section>
+					<section>
+						<img src="images/wc/print_r.png" class="naked" />
+					</section>
+				</section>
+
+				<section>
+					<h4 class="overline">Twig Features</h4>
+					<h2>Simple Logic</h2>
+				</section>
+
+				<section>
+					<ul>
+						<li>Conditionals</li>
+						<li>Loops</li>
+						<li>Includes</li>
+						<li>Images</li>
+					</ul>
+				</section>
+
+				<section>
+					<h4 class="overline">Twig Features</h4>
+					<h2>Filters</h2>
+				</section>
+
+				<section>
+					<h1>Who cares?</h1>
+				</section>
+
+				<!-- <section>
+					<section>
+						"People should learn how to write WordPress code"
+					</section>
+					<section>
+						<img src="images/toronto/sushi.jpg" />
+					</section>
+				</section> -->
+
+				<section>
+					<img src="images/rh-logo.png" class="naked"/>
+				</section>
+
+				<section>
+					<section>
+						<img src="images/wc/modern-parenting.png" class="naked"/>
+					</section>
+					<section>
+						<img src="images/wc/chatlane.png" class="naked"/>
+					</section>
+					<section>
+						<img src="images/wc/flare.png" class="naked"/>
+					</section>
+				</section>
+
+				<section>
+					<h1>20%</h1>
+				</section>
+
+				<section>
+					<section><img src="images/rh/previews/taylor-new.png" class="naked"/></section>
+					<section><img src="images/rh/previews/walker.png" class="naked" /></section>
+					<section><img src="images/rh/previews/drwho.png"  class="naked"/></section>
+					<section><img src="images/rh/previews/dickens.png"  class="naked"/></section>
+					<section><img src="images/rh/previews/ori-0.png"  class="naked"/></section>
+					<section><img src="images/rh/previews/ori-2.png"  class="naked"/></section>
+					<section><img src="images/rh/previews/koren.png"  class="naked"/></section>
+					<section><img src="images/rh/previews/taylor-splash.jpg"  class="naked"/></section>
+				</section>
+
+				<section>
+					<iframe width="980" height="615" src="//www.youtube.com/embed/_CKSll4MJx0" frameborder="0" allowfullscreen></iframe>
+				</section>
+
+				<section>
+					<h3>Twig Docs</h3>
+					<ul>
+						<li><a href="http://twig.sensiolabs.org/documentation">Twig Docs</a></li>
+						<li><a href="http://twig.sensiolabs.org/doc/templates.html">Twig for Template Designers</a></li>
+						<li><a href="http://blog.twig.sensiolabs.org/">Twig Blog (new feature doc)</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Timber Docs</h3>
+					<ul>
+						<li><a href="http://github.com/jarednova/timber">Timber on GitHub</a></li>
+						<li><a href="http://timber.upstatement.com">Timber Project Page</a></li>
+						<li><a href="http://www.wpmayor.com/articles/timber-templating-language-wordpress/">Blog post on WP Mayor</a></li>
+						<li><a href="torquemag.io/what-is-wordpress-lacking-a-template-language/">Blog post on TorqueMag.io</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Contribute to the code</h3>
+					<h3 class="fragment">Help with examples + documentation</h3>
+					<h3 class="fragment">Star Timber on GitHub!</h3>
+				</section>
+
+				<section>
+					<h1><img src="images/timber-logo.png" class="naked" /></h1>
+					<h3 class="fragment"><a href="http://bit.ly/timber-toronto">http://bit.ly/timber-toronto</a></h3>
+				</section>
+
+				<!-- <section>
+					<div class="upstatement-seal">
+						<img class="naked" src="images/st.png" />
+					</div>
+				</section> -->
+
+			</div>
+
+		</div>
+
+		<footer class="footer-info">
+			<ul>
+				<li><a href="http://twitter.com/jarednova">@jaredNova</a></li>
+				<li><a href="http://twitter.com/upstatement">@upstatement</a></li>
+				<li><a href="http://timber.upstatement.com">http://timber.upstatement.com</a></li>
+			</ul>
+		</footer>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+		<!--<a href="http://www.github.com/jarednova/timber/" class="agithub-stripe"><img style="position: absolute; top: 0; right: 0; border: 0;" src="../../_img/forkme.png" alt="Fork me on GitHub"></a>-->
+
+	</body>
+</html>

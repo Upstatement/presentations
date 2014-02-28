@@ -1,0 +1,7 @@
+
+	<h1>{{post.title}}</h1>
+	{% if post.thumbnail %}
+		<img src="{{post.thumbnail.src|resize(600, 300)}}" class="my-class" />
+	{% else %}
+		<img src="/wp-content/mytheme/default-missing-image.jpg">
+	{% endif %}
