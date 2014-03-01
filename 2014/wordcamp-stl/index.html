@@ -144,25 +144,6 @@
 
 				<section>
 					<h4 class="overline">Things to love about WordPress</h4>
-					<h3>Easy to get started</h3>
-					<h4 class="fragment">WordPress.com</h4>
-					<h4 class="fragment">WordPress.org</h4>
-					<h4 class="fragment">Go plugin shopping</h4>
-					<h4 class="fragment">Write your own theme!</h4>
-					<h4 class="fragment">Write your own plugins!</h4>
-					<h4 class="fragment">Share!</h4>
-					<aside class="notes">
-						<h4 class="">WordPress.com</h4>
-						<h4 class="">WordPress.org</h4>
-						<h4 class="">Go plugin shopping</h4>
-						<h4 class="">Write your own theme!</h4>
-						<h4 class="">Write your own plugins!</h4>
-						<h4 class="">Share!</h4>
-				    </aside>
-				</section>
-
-				<section>
-					<h4 class="overline">Things to love about WordPress</h4>
 					<h3>The <em>best</em> community</h3>
 					<aside class="notes">
 				        I'm not a JoomlaCamp St. Louis, right? This month there's been a WordCamp baltimore and WC Louisville. These are places that tech conferences normally don't go. I sometimes don't realize this in the Boston bubble (or NY or SF) but it's awesome that WordPress holds events in these exotic locations like Gran Birmingham -- I saw one of hte speakers here organizes the Canton Ohio WordCamp.
@@ -246,7 +227,7 @@
 				</section>
 
 				<section>
-					<h2 class="fragment bright">A Template Language</h3>
+					<h2 class="fragment bright">A Template Language</h2>
 					<aside class="notes">
 						So what is this really important thing that WordPress is missing?
 					</aside>
@@ -479,7 +460,7 @@
 					<ul class="naked">
 						<li>&lt;h1>&lt;?php echo <strong>get_the_title();</strong> ?&gt;&lt;/h1&gt;</li>
 						<li class="fragment">&lt;a href="&lt;?php echo <strong>get_permalink();</strong> ?&gt;"&gt;My title&lt;/a&gt;</li>
-						<li class="fragment">The ISBN is: &lt;?php echo <strong>get_post_meta(get_the_ID(), 'ISBN', true);</strong> ?&gt;</li>
+						<li class="fragment">The ISBN is: &lt;?php echo <strong>get_post_meta(get_the_ID(), 'isbn', true);</strong> ?&gt;</li>
 					</ul>
 				</section>
 
@@ -491,7 +472,7 @@
 					<ul class="naked">
 						<li>&lt;h1&gt;<strong>{{post.title}}</strong>&lt;/h1&gt;</li>
 						<li class="fragment">&lt;a href="<strong>{{post.permalink}}</strong>"&gt; My Title &lt;/a&gt;</li>
-						<li class="fragment">The ISBN is: <strong>{{post.ISBN}}</strong></li>
+						<li class="fragment">The ISBN is: <strong>{{post.isbn}}</strong></li>
 					</ul>
 				</section>
 
