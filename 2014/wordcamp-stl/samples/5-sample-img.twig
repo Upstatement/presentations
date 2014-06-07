@@ -1,7 +1,7 @@
 
 	<h1>{{post.title}}</h1>
 	{% if post.thumbnail %}
-		<img src="{{post.thumbnail.src}}" class="my-class" />
+		<img src="{{post.thumbnail.src}}" class="my-class" alt="Thumbnail for {{post.title|e}}"/>
 	{% else %}
 		<img src="/wp-content/mytheme/default-missing-image.jpg">
 	{% endif %}

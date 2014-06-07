@@ -1,3 +1,4 @@
 <h1>{{post.title}}</h1>
-<img src="{{post.thumbnail.src | default('/wp-content/mytheme/default-missing-image.jpg') | resize(300, 200)}}" class="my-class" id="img-{{post.title|sanitize}}" />
+
+<img src="{{post.thumbnail.src | default(theme.path ~ 'default-missing-image.jpg') | resize(300, 200) | watermark}}" class="my-class" id="img-{{post.title|sanitize}}" />
 
