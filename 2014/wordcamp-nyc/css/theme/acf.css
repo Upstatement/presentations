@@ -65,7 +65,7 @@ body {
  *********************************************/
 /* line 56, template/theme.scss */
 .reveal a:not(.image) {
-  color: #8beed1;
+  color: #fff96e;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -76,7 +76,7 @@ body {
 
 /* line 66, template/theme.scss */
 .reveal a:not(.image):hover {
-  color: #b7f5e2;
+  color: #fff96e;
   text-shadow: none;
   border: none;
 }
@@ -84,7 +84,7 @@ body {
 /* line 73, template/theme.scss */
 .reveal .roll span:after {
   color: #fff;
-  background: #48e5b6;
+  background: #fff621;
 }
 
 /*********************************************
@@ -106,7 +106,7 @@ body {
 /* line 97, template/theme.scss */
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #8beed1;
+  border-color: #fff96e;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
 }
 
@@ -116,45 +116,45 @@ body {
 /* line 110, template/theme.scss */
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color: #8beed1;
+  border-right-color: #fff96e;
 }
 
 /* line 115, template/theme.scss */
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color: #8beed1;
+  border-left-color: #fff96e;
 }
 
 /* line 120, template/theme.scss */
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #8beed1;
+  border-bottom-color: #fff96e;
 }
 
 /* line 125, template/theme.scss */
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color: #8beed1;
+  border-top-color: #fff96e;
 }
 
 /* line 129, template/theme.scss */
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #b7f5e2;
+  border-right-color: #fff96e;
 }
 
 /* line 133, template/theme.scss */
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #b7f5e2;
+  border-left-color: #fff96e;
 }
 
 /* line 137, template/theme.scss */
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #b7f5e2;
+  border-bottom-color: #fff96e;
 }
 
 /* line 141, template/theme.scss */
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #b7f5e2;
+  border-top-color: #fff96e;
 }
 
 /*********************************************
@@ -167,7 +167,7 @@ body {
 
 /* line 153, template/theme.scss */
 .reveal .progress span {
-  background: #8beed1;
+  background: #fff96e;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -180,7 +180,7 @@ body {
  *********************************************/
 /* line 166, template/theme.scss */
 .reveal .slide-number {
-  color: #8beed1;
+  color: #fff96e;
 }
 
 /* line 78, source/acf.scss */
@@ -191,26 +191,27 @@ body {
 .reveal h5,
 .reveal h6 {
   font-weight: 700;
+  line-height: 110%;
 }
 
-/* line 81, source/acf.scss */
+/* line 82, source/acf.scss */
 .reveal h1 {
   font-weight: 100;
   font-size: 5em;
 }
-/* line 84, source/acf.scss */
+/* line 85, source/acf.scss */
 .reveal h1.presentation-title {
   font-size: 3em;
   font-weight: 700;
   text-shadow: 1px 1px rgba(47, 53, 62, 0.5);
 }
 
-/* line 90, source/acf.scss */
+/* line 91, source/acf.scss */
 .reveal h3 {
   color: #002b36;
 }
 
-/* line 93, source/acf.scss */
+/* line 94, source/acf.scss */
 .long-list {
   -webkit-column-count: 2;
   -moz-column-count: 2;
@@ -219,28 +220,28 @@ body {
   column-count: 2;
 }
 
-/* line 97, source/acf.scss */
+/* line 98, source/acf.scss */
 .reveal section ul.big-list {
   font-size: 1.5em;
   line-height: 1.5em;
   list-style: none;
 }
-/* line 102, source/acf.scss */
+/* line 103, source/acf.scss */
 .reveal section img.no-border {
   border: none;
 }
-/* line 105, source/acf.scss */
+/* line 106, source/acf.scss */
 .reveal section img.naked {
   border: none;
   box-shadow: none;
   background: none;
 }
-/* line 110, source/acf.scss */
+/* line 111, source/acf.scss */
 .reveal section em {
   font-style: normal;
   color: #fff96e;
 }
-/* line 114, source/acf.scss */
+/* line 115, source/acf.scss */
 .reveal section ul.h3 li {
   font-size: 42px;
   line-height: 48px;
@@ -248,15 +249,15 @@ body {
   margin-bottom: 28px;
 }
 
-/* line 126, source/acf.scss */
+/* line 127, source/acf.scss */
 .reveal video {
-  max-width: 115%;
-  max-height: 115%;
-  margin-left: -7.5%;
+  max-width: 105%;
+  max-height: 105%;
+  margin-left: -2.5%;
   margin-top: -3%;
 }
 
-/* line 133, source/acf.scss */
+/* line 134, source/acf.scss */
 .reveal .banner {
   background-color: rgba(47, 53, 62, 0.6);
   position: absolute;
@@ -267,7 +268,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
   opacity: 0.3;
 }
-/* line 141, source/acf.scss */
+/* line 142, source/acf.scss */
 .reveal .banner h4 {
   font-size: 14px;
   text-transform: uppercase;

@@ -62,6 +62,7 @@
 
 				
 				
+				
 				<section data-transition="linear">
 					<img src="images/upstatement-logo.png" class="naked"/>
 					<aside class="notes">I own a company called Upstatement...</aside>
@@ -80,22 +81,18 @@
 
 					</aside>
 				</section>
-
-				<section>
-					<img src="images/twig.png" class="naked" />
-				</section>
-
-
-				<section>
-					<img src="images/timber-logo.svg" class="naked" />
-				</section>
+				
 
 				<section>
 					<h3>Editors are users too!</h3>
 				</section>
 
 				<section>
-					<h3>Screenshot!</h3>
+					<img src="images/acf/drupal.png" alt="">
+				</section>
+
+				<section>
+					<img src="images/acf/default-custom-fields.png" alt="">
 				</section>
 
 				<section >
@@ -133,6 +130,14 @@
 				</section>
 
 				<section>
+					<img src="images/acf/hlr.jpg" alt="" />
+				</section>
+
+				<section>
+					<img src="images/acf/obama.jpg" alt="" />
+				</section>
+
+				<section>
 					<h3>Let's start with the basics</h3>
 					<aside class="notes">
 						But even a basic example with ACF gives you some pretty powerful tools to play with beyond the default custom fields in WordPress and other plugins out there.
@@ -166,11 +171,23 @@
 					<aside class="notes">
 						ACF doesn't stop at posts, or even custom post types. You can attach meta data to pretty much every core object you find inside wordpress
 					</aside>
-				</section>					
+				</section>		
 				<section>
+					<img src="images/acf/sandra-before.png" alt="Sandra Day O'Connor" class="naked"/>
+				</section>			
+				<section data-transition="fade">
 					<img src="images/acf/sandra.png" alt="Sandra Day O'Connor" class="naked"/>
 				</section>
 
+				<section>
+					<section  data-transition="fade">
+						<img src="images/acf/caption-before.png" alt="Sandra Day O'Connor" class="naked"/>
+					</section>			
+					<section data-transition="fade">
+						<img src="images/acf/caption.png" alt="Sandra Day O'Connor" class="naked"/>
+					</section>
+
+				</section>
 				
 				<section>
 					<h3>Case Study:</h3><h2>Upstatement.com</h2>
@@ -187,7 +204,7 @@
 				</section> -->
 
 				<section>
-					<h3>I want custom fields <span class="framgent">on a specific page</span></h3>
+					<h3>I want custom fields <br /><span class="framgent">on a specific page</span></h3>
 					<h4 class="fragment">Page-Level Targeting</h4>
 					<h4 class="fragment">Repeater Field</h4>
 				</section>
@@ -202,27 +219,71 @@
 					<h4>Fields are configuration, not content</h4>
 				</section>
 				<section>
+					<h3>ACF (can) store your fields as JSON instead of in the database</h3>
+					<h5 class="fragment">Yay Git!</h5>
+				</section>
+				<section>
 					<video src="videos/json.mp4" controls></video>
 				</section>
 
 				<section>
 					<h3>Case Study:</h3><h2>Random House</h2>
 				</section>
-				
+
+				<section>
+					<h3>15,000 titles per year</h2>
+				</section>
+
+				<section>
+					<img src="images/acf/random-house.png" alt="">
+				</section>
+
+				<section>
+					<img src="images/acf/walter-walker.png" alt="">
+				</section>
 
 				<section>
 					<h3>Manage Many items,<br /><span class="fragment">Many <em>types</em> of items</span></h3>
-					<h5 class="fragment">Flexible Layout</h5>
+					<h5 class="fragment">Flexible Content Field</h5>
 				</section>
 
 				<section>
 					<video src="videos/rh-flexible.mp4" controls></video>
 				</section>
+
+				<section>
+					<pre><code data-trim contenteditable>
+/* mytheme/functions.php */
+add_filter( 'acf/load_field/key=field_53dcf25246f92', function($field) {
+	$posts = get_posts('post_type=post');
+	foreach($posts as $post) {
+		$field['choices'][$post->post_name] = $post->post_title;
+	}
+	return $field;
+});
+					</code></pre>
+				</section>
 				
+
+
+				<section>
+					<h3><a href="http://www.advancedcustomfields.com/resources/tutorials/creating-a-new-field-type/">Make your own fields!</a></h3>
+				</section>
+				<section>
+					<video src="videos/hlr-backgrounds.mp4" controls></video>
+					
+				</section>
+				<section>
+					<img src="images/acf/starter-kit.png" alt="" class="naked">
+				</section>
 				
 				<section>
 					<h1>THE END</h1>
-					<h3>By Jared Novack / upstatement.com</h3>
+				</section>
+
+				<section>
+					<img src="images/timber-logo.svg" class="naked" />
+					<h4 class="fragment">http://timber.upstatement.com</h4>
 				</section>
 
 			</div>
