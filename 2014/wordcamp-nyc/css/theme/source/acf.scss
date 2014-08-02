@@ -1,0 +1,139 @@
+/**
+ * Solarized Light theme for reveal.js.
+ * Author: Achim Staebler
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+@import "compass/css3";
+@import "compass/utilities/general/float";
+@import "compass/css3/inline-block";
+@import "compass/typography/lists";
+
+
+
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+html * {
+	color-profile: sRGB;
+	rendering-intent: auto;
+}
+
+// Solarized colors
+$base03:    #002b36; // dark teal
+$base02:    #073642; // 
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$orange:    #cb4b16;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+$teal: #5ee8bf;
+$red: #f55e4f;
+$light-red: rgb(255, 123, 115);
+$yellow: rgb(255, 249, 110);
+$black : rgb(47, 53, 62);
+$mint: rgb(167, 216, 195);
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: white;
+$headingColor: white;
+$headingTextShadow: none;
+$backgroundColor: darken($mint, 5);
+$linkColor: lighten($teal, 10);
+$linkColorHover: lighten($teal, 20);
+$selectionBackgroundColor: $magenta;
+$headingTextTransform : none;
+$headingFont: 'proxima-nova', Verdana, sans-serif;
+$mainFont: 'proxima-nova', Verdana, sans-serif;
+// Background generator
+// @mixin bodyBackground() {
+// 	@include radial-gradient( rgba($base3,1), rgba(lighten($base3, 20%),1) );
+// }
+$heading1TextShadow : none;
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+	font-weight:700;
+}
+.reveal h1 {
+	font-weight:100;
+	font-size:5em;
+	&.presentation-title {
+		font-size: 3em;
+		font-weight:700;
+		text-shadow: 1px 1px rgba($black, 0.5);
+	}
+}
+.reveal h3 {
+	color: $base03;
+}
+.long-list {
+	@include column-count(2);
+}
+.reveal section {
+	ul.big-list {
+		font-size:1.5em;
+		line-height: 1.5em;
+		list-style: none;
+	}
+	img.no-border {
+		border:none;
+	}
+	img.naked {
+		border:none;
+		box-shadow: none;
+		background: none;
+	}
+	em {
+		font-style:normal;
+		color:$yellow;
+	}
+	ul.h3 li {
+		font-size:42px;
+		line-height: 48px;
+		list-style: none;
+		margin-bottom: 28px;
+	}
+}
+
+.reveal .progress {
+
+}
+
+.reveal .banner {
+	background-color:rgba($black, 0.6);
+	position:absolute;
+	bottom:0px;
+	width:100%;
+	height:14px;
+	padding:10px;
+	@include opacity(0.3);
+	h4 {
+		font-size:14px;
+		text-transform: uppercase;
+	}
+
+}
