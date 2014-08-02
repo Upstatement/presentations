@@ -249,6 +249,14 @@ body {
 }
 
 /* line 126, source/acf.scss */
+.reveal video {
+  max-width: 115%;
+  max-height: 115%;
+  margin-left: -7.5%;
+  margin-top: -3%;
+}
+
+/* line 133, source/acf.scss */
 .reveal .banner {
   background-color: rgba(47, 53, 62, 0.6);
   position: absolute;
@@ -259,7 +267,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
   opacity: 0.3;
 }
-/* line 134, source/acf.scss */
+/* line 141, source/acf.scss */
 .reveal .banner h4 {
   font-size: 14px;
   text-transform: uppercase;

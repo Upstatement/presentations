@@ -123,6 +123,13 @@ $heading1TextShadow : none;
 
 }
 
+.reveal video {
+	max-width: 115%;
+	max-height: 115%;
+	margin-left: -7.5%;
+	margin-top: -3%;
+}
+
 .reveal .banner {
 	background-color:rgba($black, 0.6);
 	position:absolute;
