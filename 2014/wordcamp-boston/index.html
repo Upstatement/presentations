@@ -49,9 +49,7 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1 class="presentation-title">Essential Tools for Building<br /> a WordPress Publication</h1>
-				</section>
+				<section></section>
 
 				<section data-transition="linear">
 					<h3>Jared Novack</h3>
@@ -84,7 +82,7 @@
 				</section>
 
 				<section>
-					Newspaper design
+					<h1 class="presentation-title">Essential Tools for Building<br /> a WordPress Publication</h1>
 				</section>
 
 				<section>
@@ -104,7 +102,7 @@
 				</section>
 
 				<section>
-					<h1>Step 1:<span class="fragment"> <strong>Read it.</strong></span></h1>
+					<h2>Step 1:<span class="fragment"> <em>Read it.</em></span></h2>
 				</section>
 
 				<section>
@@ -115,6 +113,57 @@
 					<img src="images/pubs/strib-story-forms.jpg" alt="">
 				</section>			
 				
+				<section>
+					<img src="images/pubs/hlr-grid.jpg" alt="">
+					<aside class="notes">
+						What signals a new issue? Well, for the print edition: new content is signaled because a new one showed up in the mail
+					</aside>
+				</section>
+
+				<section>
+					<img src="images/acf/hlr.jpg" alt="">
+				</section>
+
+				<section>
+					<img src="images/pubs/nytimes-grid.png" alt="" class="naked">
+				</section>
+
+				<section>
+					<img src="images/pubs/bizweek.jpg" alt="">
+				</section>
+
+				<section>
+					<img src="images/pubs/abookapart.jpg" alt="">
+				</section>
+
+				<section>
+					<img src="images/pubs/oriely2.jpg" alt="">
+				</section>
+
+				<section>
+					<img src="images/pubs/wrox.png" alt="" class="naked">
+				</section>
+
+				<section data-transition="fade">
+					<img src="images/pubs/hlr-blank.png" alt="" class="naked">
+				</section>
+
+				<section data-transition="fade">
+					<img src="images/pubs/hlr-bg.png" alt="" class="naked">
+				</section>
+
+				<section data-transition="fade">
+					<img src="images/pubs/hlr-alt.png" alt="" class="naked">
+				</section>
+
+				<section data-transition="fade">
+					<img src="images/pubs/hlr-issue.png" alt="" class="naked">
+				</section>
+
+				<section data-transition="fade">
+					<img src="images/pubs/hlr-article.png" alt="" class="naked">
+				</section>
+
 				<section>
 					<img src="images/pubs/hlr-inside.jpg" alt="">
 					<aside class="notes">
@@ -173,53 +222,6 @@
 					<img src="images/pubs/hlr-printed.jpg" alt="">
 				</section>
 
-				<section>
-					<img src="images/pubs/hlr-grid.jpg" alt="">
-				</section>
-
-				<section>
-					<img src="images/acf/hlr.jpg" alt="">
-				</section>
-
-				<section>
-					<img src="images/pubs/nytimes-grid.png" alt="" class="naked">
-				</section>
-
-				<section>
-					<img src="images/pubs/bizweek.jpg" alt="">
-				</section>
-
-				<section>
-					<img src="images/pubs/abookapart.jpg" alt="">
-				</section>
-
-				<section>
-					<img src="images/pubs/oriely2.jpg" alt="">
-				</section>
-
-				<section>
-					<img src="images/pubs/wrox.png" alt="" class="naked">
-				</section>
-
-				<section data-transition="fade">
-					<img src="images/pubs/hlr-blank.png" alt="" class="naked">
-				</section>
-
-				<section data-transition="fade">
-					<img src="images/pubs/hlr-bg.png" alt="" class="naked">
-				</section>
-
-				<section data-transition="fade">
-					<img src="images/pubs/hlr-alt.png" alt="" class="naked">
-				</section>
-
-				<section data-transition="fade">
-					<img src="images/pubs/hlr-issue.png" alt="" class="naked">
-				</section>
-
-				<section data-transition="fade">
-					<img src="images/pubs/hlr-article.png" alt="" class="naked">
-				</section>
 				
 				
 				<!-- == DEVELOPERS section == -->
@@ -232,7 +234,6 @@
 				<section data-state="developers">
 					<h3>Tool #2</h3>
 					<h2 class="fragment">Template Language</h2>
-					<h2 class="fragment fade">(Timber)</h2>
 				</section>
 
 				<section data-state="developers">
@@ -248,7 +249,7 @@
 					<img src="images/timber-logo.svg" class="naked" />
 				</section>
 
-				<section>
+				<section data-state="developers">
 						<h3>The Template Language says...</h3>
 						<ul>
 							<li class="fragment">Take your markup</li>
@@ -311,19 +312,43 @@
 </code></pre>
 					</section>
 
-					<section>
+					<section data-state="developers">
 						<img src="images/pubs/grant.jpg" alt="">
 					</section>
 
-					<section>
+					<section data-state="developers">
 						<video src="../../media/2014-boston-hlr/footnote.mp4" controls autoplay="autoplay" loop></video>
 					</section>
 
-					<section>
+					<section data-state="developers">
 						<img src="images/pubs/footnote.twig.png" alt="" class="naked">
 					</section>
 
-					<!-- more timber stuff (thumbnails?) -->
+					<section data-state="developers">
+						<pre><code>
+&lt;?php
+$thumb_id = get_post_thumbnail_id($post->ID);
+$url = wp_get_attachment_url($thumb_id);
+?&gt;
+&lt;img src="&lt;?php echo $url; ?&gt;" 
+alt="Thumbnail for &lt;?php echo $post->post_title; ?&gt;" /&gt;
+						</code></pre>
+						<aside class="notes">
+							It's also easier for me!
+						</aside>
+					</section>
+
+					<section data-state="developers">
+						<img src="../../media/2014-philly-timber/2014-thumbnail.png" class="naked" />
+					</section>
+
+					<section data-state="developers">
+<pre><code data-trim contenteditable class="big-code">
+<img src="/wp-uploads/2014/08/whatever.jpg"
+ alt="Thumbnail for Hello World" />
+						</code></pre>
+					</section>
+
 
 
 				<!-- == EDITORS SECTION == -->
@@ -374,18 +399,6 @@
 				</section>
 				
 				<section data-state="editors">
-					<h3>Let's start with the basics</h3>
-					<aside class="notes">
-						But even a basic example with ACF gives you some pretty powerful tools to play with beyond the default custom fields in WordPress and other plugins out there.
-					</aside>
-				</section>
-
-				<section data-state="editors">
-					<video src="../../media/2014-nyc-acf/videos/hlr-basic.mp4" controls></video>
-					<aside class="notes">This is the video that shows a subhead</aside>
-				</section>
-
-				<section data-state="editors">
 					<h3>Related Stories</h3>
 					<h4 class="fragment">Relationship Field</h4>
 					<aside class="notes">
@@ -402,6 +415,19 @@
 					<h3>I need custom fields, <span class="fragment">but only sometimes</span></h3>
 					<h4 class="fragment">Conditionals</h4>
 				</section>
+
+				<section data-state="editors">
+					<h3>Let's start with the basics</h3>
+					<aside class="notes">
+						But even a basic example with ACF gives you some pretty powerful tools to play with beyond the default custom fields in WordPress and other plugins out there.
+					</aside>
+				</section>
+
+				<section data-state="editors">
+					<video src="../../media/2014-nyc-acf/videos/hlr-basic.mp4" controls></video>
+					<aside class="notes">This is the video that shows a subhead</aside>
+				</section>
+
 				<section data-state="editors">
 					<video src="../../media/2014-nyc-acf/videos/hlr-conditional.mp4" controls></video>
 				</section>
