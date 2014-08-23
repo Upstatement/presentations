@@ -65,9 +65,6 @@ $mainFont: 'proxima-nova', Verdana, sans-serif;
 // }
 $heading1TextShadow : none;
 
-.fade {
-	color:rgba(white, 0.62);
-}
 
 // Theme template ------------------------------
 @import "../template/theme";
@@ -81,12 +78,6 @@ html.editors .state-background {
 	background-color:$mint;
 }
 
-.reveal {
-	.big-code {
-		font-size: 36px;
-		line-height:120%;
-	}
-}
 
 .reveal h1,
 .reveal h2,
@@ -126,6 +117,11 @@ html .reveal pre code {
 		line-height: 1.5em;
 		list-style: none;
 	}
+	ul.link-list {
+		a {
+			color:white;
+		}
+	}
 	img.no-border {
 		border:none;
 	}
@@ -133,6 +129,9 @@ html .reveal pre code {
 		border:none;
 		box-shadow: none;
 		background: none;
+	}
+	.white {
+		color: white;
 	}
 	em {
 		font-style:normal;
@@ -143,6 +142,14 @@ html .reveal pre code {
 		line-height: 48px;
 		list-style: none;
 		margin-bottom: 28px;
+	}
+	.fade {
+		color:rgba(white, 0.62);
+	}
+
+	.big-code {
+		font-size: 36px;
+		line-height:120%;
 	}
 }
 
