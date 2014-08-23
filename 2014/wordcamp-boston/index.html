@@ -65,7 +65,7 @@
 
 				<section data-transition="linear">
 					<img src="images/office.jpg" class=""/>
-					<h4 class="fragment">upstatement.com/jobs</h4>
+					<h4 class="fragment">http://upstatement.com/jobs</h4>
 					<aside class="notes">Based in Boston... we do design for media companies</aside>
 				</section>
 				<section data-transition="linear">
@@ -76,10 +76,6 @@
 						Content needs good tools. 
 						Made some tools, looked for tools and found ACF!
 					</aside>
-				</section>
-
-				<section>
-					<img src="images/upstatement/newspapers.png" alt="" class="naked">
 				</section>
 
 				<section>
@@ -100,6 +96,10 @@
 				<section>
 					<h3>Tool #1</h3>
 					<h1 class="fragment">Steal ideas<br /><span class="fragment">from print</span></h1>
+				</section>
+
+				<section>
+					<img src="images/upstatement/newspapers.png" alt="" class="naked">
 				</section>
 
 				<section>
@@ -172,11 +172,14 @@
 
 				<section>
 					<h2>Step 1:<span class="fragment"> <em>Read it.</em></span></h2>
+					<aside class="notes">
+						To read it is to understand that publications goals
+					</aside>
 				</section>
 
-				<section>
+				<!-- <section>
 					<img src="images/pubs/hlr-old-web.png" alt="" class="naked">
-				</section>
+				</section> -->
 
 				<section>
 					<img src="images/pubs/hlr-side.jpg" alt="">
@@ -184,6 +187,9 @@
 
 				<section>
 					<h2 class="fragment">Reading</h2>
+					<aside class="notes">
+						Just because it's a publication does not mean it's designed to be consumed in the same way as other publications
+					</aside>
 				</section>
 
 				<section>
@@ -252,14 +258,14 @@
 					<img src="../../media/2014-philly-timber/2014-content.png" class="naked" />
 				</section>
 
-				<section data-state="developers">
+				<section data-state="developers">s
 					<img src="images/timber-logo.svg" class="naked" />
 				</section>
 
 				<section data-state="developers">
 						<h3>The Template Language says...</h3>
 						<ul>
-							<li class="fragment">Take your markup</li>
+							<li class="fragment">Take your markup <span class="fragment">(plain HTML)</span></li>
 							<li class="fragment">Add the variables</li>
 							<li class="fragment">And Timber/Twig will do the rest</li>
 						</ul>
@@ -267,7 +273,7 @@
 
 				<section data-state="developers">
 					<pre><code data-trim contenteditable class="big-code">
-<div id="justice-list" class="hlr-list">
+<div id="favorite-justices-list" class="hlr-list">
 	<h3>Favorite Justices</h3>
 	<ol>
             <li>John Marshall</li>
@@ -295,7 +301,7 @@
 
 <section data-state="developers">
 					<pre><code data-trim contenteditable class="big-code">
-<div id="justice-list" class="hlr-list">
+<div id="favorite-justices-list" class="hlr-list">
 	<h3>Favorite Justices</h3>
 	<ol>
             <li>John Marshall</li>
@@ -305,14 +311,25 @@
 </div>
 						</code></pre>
 				</section>
+				<section data-transition="fade" data-state="developers">
+						<pre><code data-trim contenteditable class="big-code">
+<div id="{{list_title}}-list" class="hlr-list">
+	<h3>{{list_title}}</h3>
+	<ol>
+	    <li>John Marshall</li>
+            <li>Thurgood Marshall</li>
+            <li>Sandra Day O'Connor</li>
+	</ol>
+</div>
+</code></pre></section>
 
 				<section data-transition="fade" data-state="developers">
 						<pre><code data-trim contenteditable class="big-code">
-<div id="{{dataset}}-list" class="hlr-list">
+<div id="{{list_title|sanitize}}-list" class="hlr-list">
 	<h3>{{list_title}}</h3>
 	<ol>
 	{% for justice in justices %}
-  		<li>{{justice}}</li>
+  	    <li>{{justice}}</li>
   	{% endfor %}
 	</ol>
 </div>
@@ -321,6 +338,7 @@
 
 					<section data-state="developers">
 						<img src="images/pubs/grant.jpg" alt="">
+						<h4 class="fragment">3 Designers : 1 Developer</h4>
 					</section>
 
 					<section data-state="developers">
@@ -332,13 +350,13 @@
 					</section>
 
 					<section data-state="developers">
-						<pre><code>
+						<pre><code class="big-code">
 &lt;?php
-$thumb_id = get_post_thumbnail_id($post->ID);
-$url = wp_get_attachment_url($thumb_id);
+    $thumb_id = get_post_thumbnail_id( get_the_ID() );
+    $url = wp_get_attachment_url( $thumb_id );
 ?&gt;
 &lt;img src="&lt;?php echo $url; ?&gt;" 
-alt="Thumbnail for &lt;?php echo $post->post_title; ?&gt;" /&gt;
+ alt="Thumbnail for &lt;?php echo $post->post_title; ?&gt;" /&gt;
 						</code></pre>
 						<aside class="notes">
 							It's also easier for me!
@@ -369,10 +387,6 @@ alt="Thumbnail for &lt;?php echo $post->post_title; ?&gt;" /&gt;
 				</section>
 
 				<section data-state="editors">
-					<img src="images/acf/obama.jpg" alt="" />
-				</section>
-
-				<section data-state="editors">
 					<img src="images/pubs/wp-editor.png" alt="" class="naked">
 					<aside class="notes">
 						Works good if you only need headline, body author and tags. but i've yet to be involved in a WP project where they said, "Yup! that's all we need!"
@@ -381,6 +395,10 @@ alt="Thumbnail for &lt;?php echo $post->post_title; ?&gt;" /&gt;
 
 				<section data-state="editors">
 					<img src="images/pubs/hlr-custom-stuff.png" alt="" class="naked">
+				</section>
+
+				<section data-state="editors">
+					<img src="images/acf/obama.jpg" alt="" />
 				</section>
 
 				<section data-state="editors">
@@ -418,11 +436,7 @@ alt="Thumbnail for &lt;?php echo $post->post_title; ?&gt;" /&gt;
 				<section data-state="editors">
 					<video src="../../media/2014-nyc-acf/videos/hlr-related.mp4" controls></video>
 				</section>
-				<section data-state="editors">
-					<h3>I need custom fields, <span class="fragment">but only sometimes</span></h3>
-					<h4 class="fragment">Conditionals</h4>
-				</section>
-
+				
 				<section data-state="editors">
 					<h3>Let's start with the basics</h3>
 					<aside class="notes">
@@ -436,6 +450,11 @@ alt="Thumbnail for &lt;?php echo $post->post_title; ?&gt;" /&gt;
 				</section>
 
 				<section data-state="editors">
+					<h3>I need custom fields, <span class="fragment">but only sometimes</span></h3>
+					<h4 class="fragment">Conditionals</h4>
+				</section>
+
+				<section data-state="editors">
 					<video src="../../media/2014-nyc-acf/videos/hlr-conditional.mp4" controls></video>
 				</section>
 				<section data-state="editors">
@@ -445,6 +464,7 @@ alt="Thumbnail for &lt;?php echo $post->post_title; ?&gt;" /&gt;
 				
 				<section data-state="editors">
 					<video src="../../media/2014-nyc-acf/videos/hlr-background-scroller.mp4" controls autoplay="autoplay" loop></video>
+					<aside class="notes">We needed a simple an intutive way to manage these backgrounds and let an editor select which one they wanted to be the background for a particular issue. We though... let's start simple... and what could be more simple than....</aside>
 				</section>
 				<section data-state="editors">
 					<img src="images/acf/backgrounds-dummy.png" alt="">
@@ -464,6 +484,10 @@ alt="Thumbnail for &lt;?php echo $post->post_title; ?&gt;" /&gt;
 
 				<section data-state="editors">
 					<img src="images/acf/obama.jpg" alt="" />
+				</section>
+
+				<section data-state="editors">
+					<img src="images/pubs/supreme-court-hlr.jpg" alt="" />
 				</section>
 
 				<section data-state="editors">
@@ -510,6 +534,7 @@ alt="Thumbnail for &lt;?php echo $post->post_title; ?&gt;" /&gt;
 				history: true,
 				center: true,
 				width:1500,
+				height: 800,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none

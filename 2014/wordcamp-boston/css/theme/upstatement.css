@@ -193,7 +193,13 @@ html.editors .state-background {
   background-color: #a7d8c3;
 }
 
-/* line 87, source/upstatement.scss */
+/* line 81, source/upstatement.scss */
+.reveal {
+  position: relative;
+  top: -50px;
+}
+
+/* line 91, source/upstatement.scss */
 .reveal h1,
 .reveal h2,
 .reveal h3,
@@ -204,34 +210,34 @@ html.editors .state-background {
   line-height: 110%;
 }
 
-/* line 91, source/upstatement.scss */
+/* line 95, source/upstatement.scss */
 .reveal h1 {
   font-weight: 100;
   font-size: 5em;
 }
-/* line 94, source/upstatement.scss */
+/* line 98, source/upstatement.scss */
 .reveal h1.presentation-title {
   font-size: 3em;
   font-weight: 700;
   text-shadow: 1px 1px rgba(47, 53, 62, 0.5);
 }
 
-/* line 101, source/upstatement.scss */
+/* line 105, source/upstatement.scss */
 html .reveal pre code {
   overflow: visible;
 }
 
-/* line 105, source/upstatement.scss */
+/* line 109, source/upstatement.scss */
 .reveal .developers {
   background-color: #00bc57;
 }
 
-/* line 108, source/upstatement.scss */
+/* line 112, source/upstatement.scss */
 .reveal h3 {
   color: #002b36;
 }
 
-/* line 111, source/upstatement.scss */
+/* line 115, source/upstatement.scss */
 .long-list {
   -webkit-column-count: 2;
   -moz-column-count: 2;
@@ -240,53 +246,58 @@ html .reveal pre code {
   column-count: 2;
 }
 
-/* line 115, source/upstatement.scss */
+/* line 119, source/upstatement.scss */
+.reveal section img, .reveal section video {
+  max-height: 100%;
+  max-width: 100%;
+}
+/* line 123, source/upstatement.scss */
 .reveal section ul.big-list {
   font-size: 1.5em;
   line-height: 1.5em;
   list-style: none;
 }
-/* line 121, source/upstatement.scss */
+/* line 129, source/upstatement.scss */
 .reveal section ul.link-list a {
   color: white;
 }
-/* line 125, source/upstatement.scss */
+/* line 133, source/upstatement.scss */
 .reveal section img.no-border {
   border: none;
 }
-/* line 128, source/upstatement.scss */
+/* line 136, source/upstatement.scss */
 .reveal section img.naked {
   border: none;
   box-shadow: none;
   background: none;
 }
-/* line 133, source/upstatement.scss */
+/* line 141, source/upstatement.scss */
 .reveal section .white {
   color: white;
 }
-/* line 136, source/upstatement.scss */
+/* line 144, source/upstatement.scss */
 .reveal section em {
   font-style: normal;
   color: #fff96e;
 }
-/* line 140, source/upstatement.scss */
+/* line 148, source/upstatement.scss */
 .reveal section ul.h3 li {
   font-size: 42px;
   line-height: 48px;
   list-style: none;
   margin-bottom: 28px;
 }
-/* line 146, source/upstatement.scss */
+/* line 154, source/upstatement.scss */
 .reveal section .fade {
   color: rgba(255, 255, 255, 0.62);
 }
-/* line 150, source/upstatement.scss */
+/* line 158, source/upstatement.scss */
 .reveal section .big-code {
   font-size: 36px;
   line-height: 120%;
 }
 
-/* line 160, source/upstatement.scss */
+/* line 168, source/upstatement.scss */
 .reveal video {
   max-width: 105%;
   max-height: 105%;
@@ -294,16 +305,16 @@ html .reveal pre code {
   margin-top: -3%;
 }
 
-/* line 167, source/upstatement.scss */
+/* line 175, source/upstatement.scss */
 .reveal .banner {
   background-color: #2f353e;
   position: absolute;
-  bottom: 0px;
+  bottom: -50px;
   width: 100%;
   height: 14px;
   padding: 10px;
 }
-/* line 174, source/upstatement.scss */
+/* line 182, source/upstatement.scss */
 .reveal .banner h4 {
   font-size: 14px;
   text-transform: uppercase;
