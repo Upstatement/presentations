@@ -1,0 +1,260 @@
+/**
+ * Solarized Light theme for reveal.js.
+ * Author: Achim Staebler
+ */
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+/* line 22, source/timber.scss */
+html * {
+  color-profile: sRGB;
+  rendering-intent: auto;
+}
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+/* line 7, template/theme.scss */
+body {
+  background: #00bc57;
+  background-color: #00bc57;
+}
+
+/* line 12, template/theme.scss */
+.reveal {
+  font-family: "proxima-nova", Verdana, sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  color: #002b36;
+}
+
+/* line 20, template/theme.scss */
+::selection {
+  color: white;
+  background: #d33682;
+  text-shadow: none;
+}
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+/* line 35, template/theme.scss */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 20px 0;
+  color: #f5f2e7;
+  font-family: "proxima-nova", Verdana, sans-serif;
+  line-height: 0.9em;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  text-shadow: none;
+}
+
+/* line 47, template/theme.scss */
+.reveal h1 {
+  text-shadow: none;
+}
+
+/*********************************************
+ * LINKS
+ *********************************************/
+/* line 56, template/theme.scss */
+.reveal a:not(.image) {
+  color: #005469;
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  -ms-transition: color .15s ease;
+  -o-transition: color .15s ease;
+  transition: color .15s ease;
+}
+
+/* line 66, template/theme.scss */
+.reveal a:not(.image):hover {
+  color: #007c9c;
+  text-shadow: none;
+  border: none;
+}
+
+/* line 73, template/theme.scss */
+.reveal .roll span:after {
+  color: #fff;
+  background: #00171c;
+}
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+/* line 83, template/theme.scss */
+.reveal section img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 4px solid #002b36;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+/* line 97, template/theme.scss */
+.reveal a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #005469;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+/* line 110, template/theme.scss */
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled {
+  border-right-color: #005469;
+}
+
+/* line 115, template/theme.scss */
+.reveal .controls div.navigate-right,
+.reveal .controls div.navigate-right.enabled {
+  border-left-color: #005469;
+}
+
+/* line 120, template/theme.scss */
+.reveal .controls div.navigate-up,
+.reveal .controls div.navigate-up.enabled {
+  border-bottom-color: #005469;
+}
+
+/* line 125, template/theme.scss */
+.reveal .controls div.navigate-down,
+.reveal .controls div.navigate-down.enabled {
+  border-top-color: #005469;
+}
+
+/* line 129, template/theme.scss */
+.reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: #007c9c;
+}
+
+/* line 133, template/theme.scss */
+.reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: #007c9c;
+}
+
+/* line 137, template/theme.scss */
+.reveal .controls div.navigate-up.enabled:hover {
+  border-bottom-color: #007c9c;
+}
+
+/* line 141, template/theme.scss */
+.reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: #007c9c;
+}
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+/* line 150, template/theme.scss */
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* line 153, template/theme.scss */
+.reveal .progress span {
+  background: #005469;
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}
+
+/*********************************************
+ * SLIDE NUMBER
+ *********************************************/
+/* line 166, template/theme.scss */
+.reveal .slide-number {
+  color: #005469;
+}
+
+/* line 75, source/timber.scss */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-weight: 700;
+}
+
+/* line 78, source/timber.scss */
+.reveal h1 {
+  font-weight: 100;
+  font-size: 5em;
+}
+
+/* line 82, source/timber.scss */
+.reveal h3 {
+  color: #002b36;
+}
+
+/* line 85, source/timber.scss */
+.long-list {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -ms-column-count: 2;
+  -o-column-count: 2;
+  column-count: 2;
+}
+
+/* line 89, source/timber.scss */
+.reveal section ul.big-list {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  list-style: none;
+}
+/* line 94, source/timber.scss */
+.reveal section img.no-border {
+  border: none;
+}
+/* line 97, source/timber.scss */
+.reveal section img.naked {
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+/* line 102, source/timber.scss */
+.reveal section em {
+  font-style: normal;
+  color: white;
+}
+/* line 106, source/timber.scss */
+.reveal section ul.h3 li {
+  font-size: 42px;
+  line-height: 48px;
+  list-style: none;
+  margin-bottom: 28px;
+}
+
+/* line 114, source/timber.scss */
+.reveal .banner {
+  background-color: #00602c;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 14px;
+  padding: 10px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
+}
+/* line 122, source/timber.scss */
+.reveal .banner h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+}

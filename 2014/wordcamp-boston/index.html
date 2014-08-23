@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Essential Tools for Building a WordPress Publication - Jared Novack - WordCamp Boston 2014</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Jared Novack">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/upstatement.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<script type="text/javascript" src="//use.typekit.net/qlv4drm.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="banner">
+				<h4>Essential Tools for Building a WordPress Publication / @jaredNova</h4>
+			</div>
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1 class="presentation-title">Essential Tools for Building a WordPress Publication</h1>
+				</section>
+
+				<section data-transition="linear">
+					<h3>Jared Novack</h3>
+					<h4 class="fragment"><em>@jaredNova</em></h4>
+					<aside class="notes">I am jared novack and jarednova on twitter, github and pretty much everywhere else
+					</aside>
+				</section>
+
+				<section data-transition="linear">
+					<img src="images/upstatement-logo.png" class="naked"/>
+					<aside class="notes">I own a company called Upstatement...</aside>
+				</section>
+
+				<section data-transition="linear">
+					<img src="images/office.jpg" class=""/>
+					<aside class="notes">Based in Boston... we do design for media companies</aside>
+				</section>
+				<section data-transition="linear">
+					<img src="images/upstatement-collage.png" class="naked">
+					<aside class="notes">
+						We make websites,
+						Websites need good content
+						Content needs good tools. 
+						Made some tools, looked for tools and found ACF!
+					</aside>
+				</section>
+
+				<section>
+					<img src="images/upstatement/newspapers.png" alt="" class="naked">
+				</section>
+
+				<section>
+					Newspaper design
+				</section>
+
+				<section>
+					<ul class="big-list">
+						<li>Design <span class="fragment fade">... for readers</span></li>
+						<li class="fragment">Build <span class="fragment fade">... for developers</span></li>
+						<li class="fragment">Manage <span class="fragment fade">... for editors </span></li>
+					</ul>
+				</section>
+
+
+				<!-- == DESIGN SECTION == -->
+
+				<section>
+					<h1>Design</h1>
+				</section>
+
+				<section>
+					<h1>Step 1:<span class="fragment"> <strong>Read it.</strong></span></h1>
+				</section>
+
+				
+
+				
+				<section>
+					<img src="images/pubs/hlr-inside.jpg" alt="">
+					<aside class="notes">
+						Who here has read lots of Law Review articles?
+					</aside>
+				</section>
+
+				<section>
+					<img src="images/pubs/hlr-side.jpg" alt="">
+				</section>
+
+				<section>
+					<span class="fragment">Reading</span>
+				</section>
+
+				<section>
+					<img src="images/pubs/nytimes.png" alt="" class="naked">
+					<h4 class="fragment">Scanning</h4>
+				</section>
+
+				<section>
+					<img src="images/pubs/buzzfeed.png" alt="" class="naked">
+					<h4 class="fragment">Scrolling<span class="fragment">, .gifs</span></h4>
+				</section>
+
+				<section>
+					<img src="images/pubs/reddit.png" alt="" class="naked">
+					<h4 class="fragment">Commenting/Interacting</h4>
+				</section>
+
+				<section>
+					<img src="images/pubs/upworthy.png" alt="" class="naked">
+					<h4 class="fragment">Sharing</h4>
+				</section>
+
+				<section>
+					<img src="images/pubs/syracuse-news.png" alt="" class="naked">
+					<h4 class="fragment">Here's what we're doing with your money</h4>
+				</section>
+
+				<section>
+					<img src="images/pubs/march-of-dimes.png" alt="" class="naked">
+					<h4 class="fragment">Mentioning Corporate Sponsors</h4>
+				</section>
+
+				<section>
+					<img src="images/pubs/hlr-printing.png" alt="" class="naked">
+					<h4 class="fragment">Printing</h4>
+				</section>
+
+				<section>
+					<img src="images/pubs/supreme-court.jpg" alt="">
+				</section>
+
+				<section>
+					<img src="images/pubs/hlr-printed.jpg" alt="">
+				</section>
+
+				<section>
+					[Obama]
+				</section>
+
+				<section>
+					<img src="images/pubs/hlr-grid.jpg" alt="">
+				</section>
+
+				<section>
+					[grid of nytimes homepages]
+				</section>
+
+				<section>
+					<img src="images/pubs/abookapart.jpg" alt="">
+				</section>
+
+				<section>
+					<img src="images/pubs/oriely2.jpg" alt="">
+				</section>
+
+				<section>
+					[Grid of Wrox books]
+				</section>
+
+				<section>
+					[Grid of Backgrounds]
+				</section>
+
+				<section>
+					backgrounds animation
+				</section>
+
+
+
+
+				
+				
+				<!-- == DEVELOPERS section == -->
+
+
+				<section data-state="developers">
+					<h1>Writing</h1>
+				</section>
+
+				<section data-state="developers">
+					Developers are people too
+				</section>
+
+				<section>
+					<section data-transition="linear">
+						<ul class="h3">
+							<li>You can do anything <span class="fragment">(it just might take a really long time)</span></li>
+							<li class="fragment">Oh God, Don't Change Anything!</li>
+							<li class="fragment">You run-out of time for the little extras</li>
+						</ul>
+						<aside class="notes">Logic + Markup are mixed together</aside>
+					</section>
+					<section data-transition="linear">
+						<h3><em>It's not fun</em></h3>
+					</section>
+				</section>
+
+				<section data-state="developers">
+					[single.php jungle]
+				</section>
+
+				<section data-state="developers">
+					This includes non-WordPress Developers
+				</section>		
+
+				<section>
+					Design vision
+				</section>	
+
+				<section data-state="developers">
+					Use a template language
+				</section>	
+
+				<section data-state="developers">
+					<pre><code data-trim contenteditable class="big-code">
+<div id="justice-list" class="hlr-list">
+	<h3>Favorite Justices</h3>
+	<ol>
+            <li>John Marshall</li>
+            <li>Thurgood Marshall</li>
+            <li>Sandra Day O'Connor</li>
+	</ol>
+</div>
+						</code></pre>
+				</section>
+
+			<section data-transition="fade" data-state="developers">
+						<pre><code data-trim contenteditable class="big-code">
+<div id="&lt;?php echo $dataset; ?>-list" class="hlr-list">
+	<h3>&lt;?php echo $list_title; ?></h3>
+	<ol>
+	&lt;?php
+	&nbsp;&nbsp;&nbsp;foreach( $justices as $justice ) {
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo '<li>'.$justice.'</li>';
+			&nbsp;&nbsp;&nbsp;}
+		?>
+	</ol>
+</div>
+</code></pre>
+</section>
+
+				<section data-transition="fade" data-state="developers">
+						<pre><code data-trim contenteditable class="big-code">
+<div id="{{dataset}}-list" class="hlr-list">
+	<h3>{{list_title}}</h3>
+	<ol>
+	{% for justice in justices %}
+  		<li>{{justice}}</li>
+  	{% endfor %}
+	</ol>
+</div>
+</code></pre>
+					</section>
+
+					<section>
+						[Grant]
+					</section>
+
+
+				<!-- == EDITORS SECTION == -->
+
+				<section data-state="editors">
+					<h1>Building</h1>
+				</section>
+
+				<section data-state="editors">
+					<h3>Editors are users too!</h3>
+				</section>
+
+				<section data-state="editors">
+					standard wp screen
+					<aside class="notes">
+						Works good if you only need headline, body author and tags. but i've yet to be involved in a WP project where they said, "Yup! that's all we need!"
+					</aside>
+				</section>
+
+				<section data-state="editors">
+					Lots of custom stuff
+				</section>
+
+				<section data-state="editors">
+					<img src="images/acf/drupal.png" alt="">
+				</section>
+
+				<section data-state="editors">
+					<img src="images/acf/default-custom-fields.png" alt="">
+				</section>
+
+				<section data-transition="linear" data-state="editors">
+					<img src="images/acf/acf-logo.png" alt="ACF Logo" class="naked">
+					<aside class="notes">
+						I've been a user since ACF 3
+						Used it on dozens of projects
+						Contributed to new ACF 5 as a beta tester, wrote about 20 lines or so of the code
+					</aside>
+				</section>
+
+				<section data-state="editors">
+					<img src="images/acf/hlr.jpg" alt="" />
+				</section>
+
+				<section data-state="editors">
+					<img src="images/acf/obama.jpg" alt="" />
+				</section>
+
+				<section data-state="editors">
+					<h3>Let's start with the basics</h3>
+					<aside class="notes">
+						But even a basic example with ACF gives you some pretty powerful tools to play with beyond the default custom fields in WordPress and other plugins out there.
+					</aside>
+				</section>
+
+				<section data-state="editors">
+					<video src="/media/2014-nyc-acf/videos/hlr-basic.mp4" controls></video>
+					<aside class="notes">This is hte video that shows a subhead</aside>
+				</section>
+
+				<section data-state="editors">
+					<h3>Related Stories</h3>
+					<h4 class="fragment">Relationship Field</h4>
+					<aside class="notes">
+						A chance to show-off my favorite basic field type
+					</aside>
+				</section>
+				<section>
+					<img src="images/acf/bad-custom-fields.png" alt="">
+				</section>
+				<section data-state="editors">
+					<video src="/media/2014-nyc-acf/videos/hlr-related.mp4" controls></video>
+				</section>
+				<section data-state="editors">
+					<h3>I need custom fields, <span class="fragment">but only sometimes</span></h3>
+					<h4 class="fragment">Conditionals</h4>
+				</section>
+				<section data-state="editors">
+					<video src="/media/2014-nyc-acf/videos/hlr-conditional.mp4" controls></video>
+				</section>
+				<section data-state="editors">
+					<h4>Big Scary Code Thing: </h4>
+					<h3><a href="http://www.advancedcustomfields.com/resources/tutorials/creating-a-new-field-type/">Make your own fields!</a></h3>
+				</section>
+				<section data-state="editors">
+					<img src="images/acf/starter-kit.png" alt="" class="naked">
+				</section>
+				<section data-state="editors">
+					<video src="/media/2014-nyc-acf/videos/hlr-background-scroller.mp4" controls></video>
+				</section>
+				<section data-state="editors">
+					<img src="images/acf/backgrounds-dummy.png" alt="">
+				</section>
+				<section data-state="editors">
+					<video src="/media/2014-nyc-acf/videos/hlr-backgrounds.mp4" controls></video>
+				</section>
+
+				<section data-state="editors">
+					Dashboard
+				</section>
+				
+				<section>
+					<h1>THE END</h1>
+					<h2 class="fragment">http://bit.ly/acf-nyc</h2>
+				</section>
+
+				<section>
+					<h2>Jared Novack</h2>
+				</section>
+
+				<section>
+					<img src="images/timber-logo.svg" class="naked" />
+					<h4 class="fragment">http://timber.upstatement.com</h4>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+				width:1500,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

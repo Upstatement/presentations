@@ -1,0 +1,463 @@
+	<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Super-Charged Themes with a Template Language - WordCamp Philly - 2014</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Jared Novack">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/timber.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<script type="text/javascript" src="//use.typekit.net/qlv4drm.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="banner">
+				<h4>Super-Charged Themes with a Template Language / @jaredNova</h4>
+			</div>
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section >
+					<h1>Twig!</h1>
+					<h3>Super-Charged Themes with a Template Language</h3>
+					<aside class="notes">
+						A new tool to make great, well-designed themes.
+						<br>really excited to be here, this is the topic I'm super passionate about
+					</aside>
+				</section>
+
+				<section data-transition="linear">
+					<section data-transition="linear">
+						<h3>Jared Novack</h3>
+						<h4 class="fragment"><em>@jaredNova</em></h4>
+						<aside class="notes">I am jared novack and jarednova on twitter, github and pretty much everywhere else
+						</aside>
+					</section>
+					<section data-transition="linear">
+						<img src="images/upstatement-logo.png" class="naked"/>
+						<aside class="notes">I own a company called Upstatement...</aside>
+					</section>
+					<section data-transition="linear">
+						<img src="images/office.jpg" class=""/>
+						<aside class="notes">Based in Boston... we do design for media companies</aside>
+					</section>
+					<section data-transition="linear">
+						<img src="images/upstatement-collage.png" class="naked">
+						<aside class="notes"><p>We come at WordPress from a very design-centric way. Our firm's philosophy is that design guides development. We don't take an off-the-shelf WP theme and start moving things around. We build HTML from scratch to best support the client's mission.</p>
+						<p>
+						The way our process used to be was I would take a "naked" theme like underscores or starkers and start to copy-and-paste HTML into it.</p></aside>
+					</section>
+				</section>
+
+				<section>
+					<ul class="h3">
+						<li>What's a Template Language?</li>
+						<li class="fragment">What is Twig?</li>
+						<li class="fragment">What YOU can do with it</li>
+					</ul>
+					<aside class="notes">
+						Over the last year, we've adopted a Template Language into the heart of our workflow which has helped us make WP sites faster, and more true to the designs.
+						<br>Finally, at the end I'm going to show some actual code, which is incredibly dangerous in a live talk. But the code that we have is so cool, I think it's worth it
+					</aside>
+				</section>
+
+				<section>
+					<section data-transition="linear">
+						<h3>Good news!</h3>
+						<p class="fragment">PHP is a template language!</p>
+						<p class="fragment">...from 1995</p>
+						<aside class="notes">
+						How many people have ever edited, created a theme? maybe a child theme?
+						<br>Think about your phone for a second and how far it's come since your first iPhone. Technologically speaking, here's a visual for reference of another piece of tech that came out in 1995</aside>
+					</section>
+					<section data-transition="linear">
+						<img src="images/startac.jpg" />
+						<aside class="notes">Here's another one...If you had walked up to a businessman on the street in 1995... </aside>
+					</section>
+					<section data-transition="linear">
+						<img src="images/spice-girls.jpg" />
+						<aside class="notes">and asked him: "sir, who is your favorite spice girl?", they would have looked at you like you were an idiot, not just because it's a stupid question but b/c their first album didn't come out until November 1996. 
+						<br>
+						A lot has happened in technology since the StarTac phone and the Spice Girls debuted</aside>
+					</section>
+				</section>
+
+				<section>
+					<img src="images/handlebars.png" class="naked" />
+					<aside class="notes">In that time a lot has happened
+						<br>Let's actually start our story of Template Languages in the JS world, so we're not distracted by WordPress knowledge and biases
+						<br>This will help get the concept across, and indeed this is where I came to learn about template languages
+					</aside>
+				</section>
+
+
+				<section>
+					<section data-transition="linear">
+						<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+var personSlug = sanitizeName(person.name);
+var string = '<div id="'+personSlug+'" class="person-profile">';
+string += '<h3>'+person.name+'</h3>';
+string += '<img src="'+person.src+'" alt="'+person.name+' headshot" />';
+string += '<ul>';
+for (var i = 0; i < person.favoriteMovies.length; i++) {
+	string += '<li>' + person.favoriteMovies[i] + '</li>';
+}
+string += '</ul></div>';
+						</code></pre>
+					</section>
+					<section>
+						<h3>The Template Language says...</h3>
+						<ul>
+							<li class="fragment">Take your markup</li>
+							<li class="fragment">Add the variables</li>
+							<li class="fragment">And Handlebars will do the rest</li>
+						</ul>
+					</section>
+
+					<section data-transition="fade">
+						<pre><code data-trim contenteditable style="font-size: 18px; magin-top: 20px;">
+<div id="george-costanza" class="person-profile">
+	<h3>George Costanza</h3>
+	<img src="/images/costanza.jpg" alt="George Costanza headshot"/>
+	<ul>
+            <li>Death Blow</li>
+            <li>Chunnel</li>
+            <li>Cry, Cry Again</li>
+	</ul>
+</div>
+						</code></pre>
+					</section>
+					<section data-transition="fade">
+						<pre><code data-trim contenteditable style="font-size: 18px; magin-top: 20px;">
+<div id="{{sanitizeName name}}" class="person-profile">
+	<h3>{{name}}</h3>
+	<img src="{{src}}" alt="{{name}} headshot"/>
+	<ul>
+	{{#each favoriteMovies}}
+  		<li>{{this}}</li>
+  	{{/each}}
+	</ul>
+</div>
+						</code></pre>
+					</section>
+					<section data-transition="fade">
+						<pre><code data-trim contenteditable style="font-size: 18px; magin-top: 20px;">
+<div id="george-costanza" class="person-profile">
+	<h3>George Costanza</h3>
+	<img src="/images/costanza.jpg" alt="George Costanza headshot"/>
+	<ul>
+            <li>Death Blow</li>
+            <li>Chunnel</li>
+            <li>Cry, Cry Again</li>
+	</ul>
+</div>
+						</code></pre>
+					</section>
+					<section data-transition="fade">
+						<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+var personSlug = sanitizeName(person.name);
+var string = '<div id="'+personSlug+'" class="person-profile">';
+string += '<h3>'+person.name+'</h3>';
+string += '<img src="'+person.src+'" alt="'+person.name+' headshot" />';
+string += '<ul>';
+for (var i = 0; i < person.favoriteMovies.length; i++) {
+	string += '<li>' + person.favoriteMovies[i] + '</li>';
+}
+string += '</ul></div>';
+						</code></pre>
+					</section>
+					<section data-transition="linear">
+						<h3>Turns out this is a lot easier</h3>
+					</section>
+					<aside class="notes">And template languages are a big big thing in the JavaScript world</aside>
+				</section>
+				<section>
+					<ul class="long-list">
+						<li>JSRender</li>
+						<li>dust.js</li>
+						<li>Transparency</li>
+						<li>dom.js</li>
+						<li>doT.sj</li>
+						<li>EJS</li>
+						<li>Handlebars</li>
+						<li>Hogan.js</li>
+						<li>ICanHaz.js</li>
+						<li>Jade templates</li>
+						<li>JSRender</li>
+						<li>Mustache</li>
+						<li>Nunjucks</li>
+						<li>Plates.js</li>
+						<li>Pure.js</li>
+						<li>Underscore Templates</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="big-list">
+						<li>Craft</li>
+						<li>Drupal</li>
+						<li>ExpressionEngine</li>
+						<li>Laravel</li>
+						<li>Symfony</li>
+					</ul>
+					<aside class="notes">Notice anything missing from that list? Let's go see what's going on in the WordPress template world in 2014</aside>
+				</section>
+				
+				<section>
+					<section data-transition="linear">
+						<img src="images/2014-folder.png" class="naked" />
+						<aside class="notes">Let's open up that content.php, that's the like atomic post-level template that appears on the front page and on a sigle blog post page: really important</aside>
+					</section>
+					<section data-transition="linear">
+						<img src="images/2014-content.png" class="naked" />
+						<aside class="notes">So if I had to choose I think this more resembles the nasty manual string assembly were were doing in JavaScript instead of the template/variable model you can do with Handlebars. You're moving between PHP and HTML, you've got all these different syntax conventions. function calls, like thumbnail function, where's that?</aside>
+					</section>
+					<section data-transition="linear">
+						<img src="images/2014-thumbnail.png" class="naked" />
+						<aside class="notes">Oh, that's in this template-tags.php file. Ok and here's PHP -- it's not totally clear where the HTML is coming from. Of course, I can't say this doesn't yield results, 2014 is probably one of the most popular ways to present a site in the world. It also took a lot of people to make</aside>
+					</section>
+				</section>
+
+				<section>
+					<section data-transition="linear">
+						<ul class="h3">
+							<li>You can do anything <span class="fragment">(it just might take a really long time)</span></li>
+							<li class="fragment">Oh God, Don't Change Anything!</li>
+							<li class="fragment">You run-out of time for the little extras</li>
+						</ul>
+						<aside class="notes">Logic + Markup are mixed together</aside>
+					</section>
+					<section data-transition="linear">
+						<h3><em>It's not fun</em></h3>
+					</section>
+				</section>
+
+				
+				<section>
+					<h2>Twig to the rescue!</h2>
+				</section>
+				<section data-transition="linear">
+					<img src="images/twig.png" class="naked" />
+					<aside class="notes">Twig is open source, run by the guy who does Symfony which is a PHP framework. It has become to PHP what jQuery is to JS: yes there are others, but it's the clear #1.</aside>
+				</section>
+				<section>
+					<ul class="big-list">
+						<li><strong>Craft</strong></li>
+						<li><strong>Drupal</strong></li>
+						<li>ExpressionEngine</li>
+						<li>Laravel</li>
+						<li><strong>Symfony</strong></li>
+					</ul>
+				</section>
+				<section>
+					<section data-transition="linear">
+						<img src="images/twig-docs.png" class="naked" />
+						<aside class="notes">Excellent, excellent docs to get started and get others up-to-speed</aside>
+					</section>
+					<section data-transition="linear">
+						<img src="images/django.png" class="naked" />
+						<aside class="notes">Beautiful syntax, it shares syntax with Django and many others so when I'm sharing twig with clients they're like wait: I've seen this before. Not something dreamed-up in one guy's head, it's based on many years of convention and success</aside>
+					</section>
+				</section>
+				<section>
+					<section data-transition="linear">
+						<ul class="big-list">
+							<li><a href="http://inject.netcod.es/">Inject</a></li>
+							<li><a href="https://github.com/Rarst/meadow">Meadow</a></li>
+							<li><a href="http://wordpress.org/plugins/twigpress/">TwigPress</a></li>
+							<li><a href="https://github.com/jonasblomdin/Twig-Wordpress">Twig WordPress</a></li>
+							<li><a href="http://wordpress.org/plugins/timber-library/"><strong>Timber</strong></a></li>
+						</ul>
+					</section>
+					<section data-transition="linear">
+						<img src="images/timber-logo.svg" class="naked" />
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3><em>Problem:</em> function stew</h3>
+					</section>
+					<section>
+						<ul>
+							<li>&lt;?php get_the_title(); ?&gt;</li>
+							<li class="fragment">&lt;?php get_the_content(); ?&gt;</li>
+							<li class="fragment">&lt;?php get_permalink(); ?&gt;</li>
+							<li class="fragment">&lt;?php get_post_custom($id, 'my-field', true); ?&gt;</li>
+						</ul>
+						<aside class="notes">
+							quirks, you have to spend in codex. not impossible, but stumbling blocks around the way
+						</aside>
+					</section>
+					<section>
+						<img src="images/codex.png" class="naked" />
+					</section>
+					<section>
+						<pre><code>
+&lt;?php
+$thumb_id = get_post_thumbnail_id($post->ID);
+$url = wp_get_attachment_url($thumb_id);
+?&gt;
+&lt;img src="&lt;?php echo $url; ?&gt;" 
+alt="Thumbnail for &lt;?php echo $post->post_title; ?&gt;" /&gt;
+						</code></pre>
+					</section>
+					<section>
+						<h3><em>Solution:</em> object-based code</h3>
+					</section>
+					<section>
+						[show getting a thumbnail, title and permalink on a single page]
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3><em>Problem: </em>keeping templates neat</h3>
+					</section>
+					<section>
+						<h3><em>Solution: </em>Filters!</h3>
+						<aside class="notes">
+							- show title in zone
+							- upper!
+							- default!
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3><em>Problem:</em> looping</h3>
+					</section>
+					<aside class="notes">
+						[show getting looping through and then setting vars , title and permalink on a tease]
+					</aside>
+				</section>
+
+				<section>
+					<section>
+						<h3><em>Problem:</em> inclusion</h3>
+					</section>
+					<aside class="notes">
+						[set thumbnail for posts]
+						[create if statement]
+						[create an alternate tease style for a segment with a play button ]
+						[create a special one for interview with ben franklin]
+					</aside>
+				</section>
+
+				<section>
+					<section data-transition="linear">
+						<h3><em>Problem:</em> Linear Page Construction</h3>
+					</section>
+					<section data-transition="fade">
+						<img src="images/lego-man.jpg" />
+					</section>
+					<section data-transition="fade">
+						<img src="images/lego-wordpress.jpg" />
+					</section>
+					<section data-transition="linear">
+						<img src="images/latimes.png" class="naked" />
+					</section>
+					<section data-transition="linear">
+						<img src="images/farmland.jpg" />
+					</section>
+					<section data-transition="linear">
+						<h3><em>Solution:</em> Template Inheritance and Extension</h3>
+					</section>
+					
+				</section>
+
+				<section>
+					<section data-transition="linear">
+						<h2>In conclusion...</h2>
+					</section>
+					<section data-transition="linear">
+						<img src="images/spice-girls-olympics.jpg" />
+						<aside class="notes">
+							Yes, you can still write themes like it's 1995. But you can also do what Posh Spice did: trade-up for something better. She showed up for the Olympics, because it's the Olympics, but she doesn't do the tours.
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<h3>Twig: <em>twig.sensiolabs.org</em></h3>
+					<h3>Timber: <em>timber.upstatement.com</em></h3>
+					<p>(The slides will be posted as soon as<br /> I can get an SSH connection to GitHub)</p>
+				</section>
+
+				
+				<section>
+					<h1>THE END</h1>
+					<h3>By Jared Novack / upstatement.com</h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
