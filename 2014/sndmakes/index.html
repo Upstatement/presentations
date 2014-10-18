@@ -1,0 +1,282 @@
+	<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Super-Charged Themes with a Template Language - WordCamp Philly - 2014</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Jared Novack">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/timber.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<script type="text/javascript" src="//use.typekit.net/qlv4drm.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="banner">
+				<h4>Timber / @jaredNova</h4>
+			</div>
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				
+
+				<section data-transition="linear">
+					<h2>How might we empower designers inside of a CMS?</h2>
+				</section>
+
+				<section>
+					<h3><em>I'm a designer</em><span class="fragment"> and I want to do something special</span>
+				</section>
+
+				<section>
+					<img src="../../media/2014-sndmakes/tsarnav.png" class="naked"/>
+				</section>
+
+				<section>
+					<img src="../../media/2014-sndmakes/twentyten.png" class="naked"/>
+				</section>
+
+				<section data-transition="linear">
+					<h3>Oh God! Don't Touch Anything!</h3>
+				</section>
+
+				<section data-transition="linear">
+					<h3>No problem, just ditch the CMS</h3>
+				</section>
+
+				<section>
+					<img src="../../media/2014-sndmakes/url.png" class="naked"/>
+				</section>
+
+				<section data-transition="linear">
+					<img src="../../media/2014-philly-timber/timber-logo.svg" class="naked" />
+				</section>
+
+				<section>
+					<img src="http://upload.wikimedia.org/wikipedia/commons/2/20/WordPress_logo.svg" alt="WordPress logo" class="naked" style="width:66%"> 
+				</section>
+
+				<section>
+					<img src="../../media/2014-sndmakes/tsarnav-intro.png" class="naked"/>
+				</section>
+
+				<section>
+					<code>http://bostonglobe.com/2014/10/tsarnaev/</code>
+					<code class="fragment">single-tsarnaev.twig</code>
+				</section>
+
+				<section>
+					<pre><code data-trim contenteditable style="font-size: 18px; magin-top: 20px;">
+<div class="intro">
+    <p class="tamerlan"><a href="#tamerlan-intro" class="navlink">Tamerlan</a>, 
+    	the eldest, started hearing the voice as a young man. It disturbed him. 
+    	It frightened him, as the voice inside grew more insistent. It may in 
+    	the end have directed him.</p>
+    <p class="dzhokhar"><a href="#dzhokhar-intro" class="navlink">Dzhokhar</a>, 
+    	the youngest, was the child full of promise. But almost from the moment 
+    	he left home, trouble and failure seemed to mark him, and risk to allure 
+    	him. He was anything but a passive figure in the history the brothers
+    	 would soon make.</p>
+</div>
+						</code></pre>
+				</section>
+
+				<section>
+					<img src="../../media/2014-sndmakes/tsarnav-admin.png" class="naked"/>
+					<h4>In the WordPress Admin...</h4>
+				</section>
+
+				<section>
+					<h3><em>Problem:</em> function stew</h3>
+				</section>
+				<section>
+					<ul>
+						<li>&lt;?php get_the_title(); ?&gt;</li>
+						<li class="fragment">&lt;?php get_the_content(); ?&gt;</li>
+						<li class="fragment">&lt;?php get_permalink(); ?&gt;</li>
+						<li class="fragment">&lt;?php get_post_custom(get_the_ID(), 'tamerlan_intro', true); ?&gt;</li>
+					</ul>
+					<aside class="notes">
+						quirks, you have to spend in codex. not impossible, but stumbling blocks around the way
+					</aside>
+				</section>
+				<section>
+					<img src="../../media/2014-philly-timber/codex.png" class="naked" />
+				</section>
+				
+				<section>
+					<h3><em>Solution:</em> object-based code</h3>
+					<h2 class="fragment">with Twig</h2>
+				</section>
+
+				<section>
+					<pre><code data-trim contenteditable style="font-size: 18px; magin-top: 20px;">
+<div class="intro">
+    <p class="tamerlan"><a href="#tamerlan-intro" class="navlink">Tamerlan</a>, 
+    	the eldest, started hearing the voice as a young man. It disturbed him. 
+    	It frightened him, as the voice inside grew more insistent. It may in 
+    	the end have directed him.</p>
+    <p class="dzhokhar"><a href="#dzhokhar-intro" class="navlink">Dzhokhar</a>, 
+    	the youngest, was the child full of promise. But almost from the moment 
+    	he left home, trouble and failure seemed to mark him, and risk to allure 
+    	him. He was anything but a passive figure in the history the brothers
+    	 would soon make.</p>
+</div>
+						</code></pre>
+				</section>
+
+				<section>
+					<img src="../../media/2014-sndmakes/special-project-template.png" class="naked"/>
+				</section>
+
+				<section>
+					<code>template-special-projects.twig</code>
+				</section>
+
+				<section>
+					<pre><code data-trim contenteditable style="font-size: 18px; magin-top: 20px;">
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;!-- css and meta tags --&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		<nav>
+			<h1><img src="logos/globe-logo.png" /></h1>
+			<a class="facebook-thing" href="http://facebook.com/bostonglobe">Share</a>
+			<a class="twitter-thing" href="http://twitter.com/bostonglobe">Tweet</a>
+		</nav>
+		{% block content %}
+			<!-- Special project stuff here -->
+		{% endblock %}
+		&lt;footer&gt;
+			{% include "components/globe-footer.twig" %}
+		&lt;/footer&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+						</code></pre>
+				</section>
+
+				<section>
+					<pre><code data-trim contenteditable style="font-size: 18px; magin-top: 20px;">
+{% extends "template-special-projects.twig" %}
+
+{% block content %}
+	<div class="intro">
+    <p class="tamerlan"><a href="#tamerlan-intro" class="navlink">Tamerlan</a>, 
+    	{{post.tamerlan_intro}}</p>
+    <p class="dzhokhar"><a href="#dzhokhar-intro" class="navlink">Dzhokhar</a>, 
+    	{{post.dzhokhar_intro}}</p>
+</div>
+{% endblock %}
+						</code></pre>
+				</section>
+
+				<section>
+					<img src="../../media/2014-sndmakes/example-do.png" class="naked"/>
+				</section>
+
+				<section>
+					<img src="../../media/2014-sndmakes/example-nation-swell.png" class="naked"/>
+				</section>
+
+				<section>
+					<img src="../../media/2014-sndmakes/example-beta-boston.png" class="naked"/>
+				</section>
+
+				<section>
+					<img src="../../media/2014-sndmakes/example-crux.png" class="naked"/>
+				</section>
+
+				<section>
+					<img src="../../media/2014-sndmakes/example-hlr.png" class="naked"/>
+				</section>
+					
+				<section data-transition="linear">
+					<img src="../../media/2014-sndmakes/timber-page.png" class="naked"/>
+				</section>
+
+				<section data-transition="linear">
+					<img src="../../media/2014-sndmakes/timber-github.png" class="naked"/>
+				</section>
+
+				<section>
+					<h3>Twig: <em>twig.sensiolabs.org</em></h3>
+					<h3>Timber: <em>upstatement.com/timber</em></h3>
+				</section>
+
+				
+				<section>
+					<h1>THE END</h1>
+					<h3>By Jared Novack / upstatement.com</h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
