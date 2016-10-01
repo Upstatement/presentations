@@ -99,45 +99,44 @@
 
 				<section class="split">
 					<div>
-						
-						1
+						<h2>1</h2>
 					</div>
 					<div>
-						I
-					</div>
-				</section>
-				<section class="split">
-					<div>
-						12
-					</div>
-					<div>
-						XII
+						<h2>I</h2>
 					</div>
 				</section>
 				<section class="split">
 					<div>
-						37
+						<h2>12</h2>
 					</div>
-					<div>
-						XXXVII
+					<div class="fragment">
+						<h2>XII</h2>
 					</div>
 				</section>
-				<section>
+				<section class="split">
 					<div>
-						1983
+						<h2>37</h2>
 					</div>
+					<div class="fragment">
+						<h2>XXXVII</h2>
+					</div>
+				</section>
+				<section class="split">
 					<div>
-						MCMLXXXIII
+						<h2>1983</h2>
+					</div>
+					<div class="fragment">
+						<h2>MCMLXXXIII</h2>
 					</div>
 				</section>
 
 				<section>
-					<div>
-						324,601,928
-					</div>
-					<div>
-						
-					</div>
+					<section>
+						<h2>324,601,928</h2>
+					</section>
+					<section>
+						<img src="images/2016/roman-big.png">
+					</section>
 				</section>
 
 				<section>
@@ -145,38 +144,55 @@
 				</section>
 
 				<section>
-					Kubrick
-					<h4 class="fragment">V</h4>
+					<img src="images/2016/kubrick.jpg" style="display: block;"/>
+					<h4>Kubrick</h4>
+					<h3 class="fragment">V</h3>
 				</section>
 
 				<section>
-					The Undefeated
-					<h4 class="fragment">MCMLXXXIII</h4>
+					<div style="position: relative; top:-100px;">
+						<a href="http://theundefeated.com" target="blank"><img src="images/2016/undefeated.png" style="display: block;" class="naked"/></a>
+						<h4>The Undefeated</h4>
+						<h3 class="fragment">MCMLXXXIII</h3>
+					</div>
 				</section>
 
 				<section>
-					Yes, it can do anything
-					Reall inefficent
+					<h2>Yes, you can do anything</h2>
+					<h2 class="fragment">Efficiently?</h2>
 				</section>
 
-
-				<section>
-					
-					Twentysixteen example
-					This is nuts!
-				</section>
 
 				<section>
 					
-					MVC
+					<section data-transition="linear">
+						<img src="../../media/2014-philly-timber/2014-folder.png" class="naked" />
+						<aside class="notes">Let's open up that content.php, that's the like atomic post-level template that appears on the front page and on a sigle blog post page: really important</aside>
+					</section>
+					<section data-transition="linear">
+						<img src="../../media/2014-philly-timber/2014-content.png" class="naked" />
+						<aside class="notes">So if I had to choose I think this more resembles the nasty manual string assembly were were doing in JavaScript instead of the template/variable model you can do with Handlebars. You're moving between PHP and HTML, you've got all these different syntax conventions. function calls, like thumbnail function, where's that?</aside>
+					</section>
+					<section data-transition="linear">
+						<img src="../../media/2014-philly-timber/2014-thumbnail.png" class="naked" />
+						<aside class="notes">Oh, that's in this template-tags.php file. Ok and here's PHP -- it's not totally clear where the HTML is coming from. Of course, I can't say this doesn't yield results, 2014 is probably one of the most popular ways to present a site in the world. It also took a lot of people to make</aside>
+					</section>
 				</section>
 
 				<section>
-					V is for View
+					<h1>MVC</h1>
 				</section>
 
 				<section>
-					<h2>Template Langugae</h2>
+					<h1><em>MV</em>C</h1>
+				</section>
+
+				<section>
+					<h1><em>V</em> is for View</h1>
+				</section>
+
+				<section>
+					<h2>Template Language</h2>
 				</section>
 
 				<section>
@@ -201,7 +217,7 @@
 				</section>
 
 				<section>
-					<img src="../../media/2014-philly-timber/handlebars.png" class="naked" />
+					<img src="images/2016/nunjucks.png" class="naked" />
 					<aside class="notes">In that time a lot has happened
 						<br>Let's actually start our story of Template Languages in the JS world, so we're not distracted by WordPress knowledge and biases
 						<br>This will help get the concept across, and indeed this is where I came to learn about template languages
@@ -378,7 +394,7 @@ string += '</ul></div>';
 				</section>
 				<section>
 					<section data-transition="linear">
-						<img src="../../media/2014-philly-timber/timber-logo.svg" class="naked" />
+						<img src="images/2016/timber.svg" class="naked" />
 					</section>
 				</section>
 
@@ -401,7 +417,7 @@ string += '</ul></div>';
 						<img src="../../media/2014-philly-timber/codex.png" class="naked" />
 					</section>
 					<section>
-						<pre><code>
+						<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
 &lt;?php
 $thumb_id = get_post_thumbnail_id($post->ID);
 $url = wp_get_attachment_url($thumb_id);
@@ -433,37 +449,19 @@ alt="Thumbnail for &lt;?php echo $post->post_title; ?&gt;" /&gt;
 				</section>
 
 				<section>
-					<section>
-						<h3><em>Problem:</em> looping</h3>
-					</section>
-					<aside class="notes">
-						[show getting looping through and then setting vars , title and permalink on a tease]
-					</aside>
+					<h1><em>M</em> is for Model</h1>
 				</section>
 
 				<section>
-					<section>
-						<h3><em>Problem:</em> inclusion</h3>
-					</section>
-					<aside class="notes">
-						[set thumbnail for posts]
-						[create if statement]
-						[create an alternate tease style for a segment with a play button ]
-						[create a special one for interview with ben franklin]
-					</aside>
+					<img src="images/2016/2016-prefixes.png" />
 				</section>
 
 				<section>
-					M is for Model
+					<img src="images/2016/2016-classes.png" />
 				</section>
 
 				<section>
-					
-					twentysixteeen stew
-				</section>
-
-				<section>
-					
+					<img src="images/2016/trace-post.png" class="naked"/>
 				</section>
 
 				<section>
@@ -476,12 +474,15 @@ alt="Thumbnail for &lt;?php echo $post->post_title; ?&gt;" /&gt;
 							Yes, you can still write themes like it's 1995. But you can also do what Posh Spice did: trade-up for something better. She showed up for the Olympics, because it's the Olympics, but she doesn't do the tours.
 						</aside>
 					</section>
+					<section data-transition="linear">
+						<img src="images/2016/posh-spice.jpg" />
+					</section>
 				</section>
 
 				<section>
 					<h3>Twig: <em>twig.sensiolabs.org</em></h3>
 					<h3>Timber: <em>upstatement.com/timber</em></h3>
-					<p>(The slides will be posted as soon as<br /> I can get an SSH connection to GitHub)</p>
+					<p>(The slides will be posted as soon as<br /> I get to WiFI that allows GitHub)</p>
 				</section>
 
 				
